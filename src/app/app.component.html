@@ -1,311 +1,575 @@
 <div id="dc-wrapper" class="dc-wrapper dc-haslayout">
-    <!-- Header Start -->
-    <header id="dc-header" class="dc-header dc-haslayout">
-        <div class="dc-topbar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="dc-helpnum">
-                            <span>Emergency Help!</span>
-                            <a href="tel:+919654742998">+91-9654742998</a>
-                        </div>
-                        <div class="dc-rightarea">
-                            <ul class="dc-simplesocialicons dc-socialiconsborder">
-                                <li class="dc-facebook"><a href="javascript:void(0);"><i class="fab fa-facebook-f"></i></a></li>
-                                <li class="dc-instagram"><a href="javascript:void(0);"><i class="fab fa-instagram"></i></a></li>
-                                <li class="dc-twitter"><a href="javascript:void(0);"><i class="fab fa-twitter"></i></a></li>
-                                <li class="dc-linkedin"><a href="javascript:void(0);"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li class="dc-youtube"><a href="javascript:void(0);"><i class="fab fa-youtube"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Header Start -->
+  <header id="dc-header" class="dc-header dc-haslayout">
+    <!-- NAV BAR  -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <button
+          class="navbar-toggler mobile-menu-btn"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"
+            ><img src="assets/icons/list.svg" class="menu-icon" alt=""
+          /></span>
+        </button>
+        <div class="logo-container">
+          <a class="navbar-brand" href="#"
+            ><img src="assets/logo/heart logo.png" style="width: 3.5rem" alt=""
+          /></a>
         </div>
-        <div class="dc-navigationarea">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                        <strong class="dc-logo"><a routerLink="/home"><img src="assets/images/logo.png" alt="company logo here"></a></strong>
-                        <div class="dc-rightarea">
-                            <nav id="dc-nav" class="dc-nav navbar-expand-lg">
-                                <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                    <i class="lnr lnr-menu"></i>
-                                </button>
-                                <div class="collapse navbar-collapse dc-navigation" id="navbarNav">
-                                    <ul class="navbar-nav">
-                                            <li class="dc-navactive">
-                                            <a routerLink="">Home</a>
-
-                                        </li>
-                                        <li class="menu-item-has-children page_item_has_children ">
-                                            <a routerLink="/doctor">Doctor</a>
-                                            <ul class="sub-menu">
-
-<li *ngFor="let list of doctor_category_list"><a (click)="route_doctor(list)" routerLink="/doctor">{{list.cat_name}}</a></li>
-<!-- <li><a routerLink="/doctor">Gastroenterology</a></li>
-<li><a routerLink="/doctor">Gynaecology and Obstetrics</a></li>
-<li><a routerLink="/doctor">Oncology and Oncosurgery</a></li>
-<li><a routerLink="/doctor">Orthopedics</a></li>
-<li><a routerLink="/doctor">Transplant Surgery</a></li>
-<li><a routerLink="/doctor">Urologist and Andrologist</a></li> -->
-
-
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children page_item_has_children">
-                                            <a routerLink="/hospitals">Hospital</a>
-                                            <ul class="sub-menu">
-                                                <li *ngFor="let list of hospital_category_list"><a (click)="route_hospital(list)"  href="javascript:void(0);"  routerLink="/doctor">{{list.cat_name}}</a></li>
-                                               
-<!-- <li><a routerLink="/hospitals" >Cardiology and Cardiac Surgery</a></li>
-<li><a routerLink="/hospitals" >Dental Treatment</a></li>
-<li><a routerLink="/hospitals" >Gastroenterology</a></li>
-<li><a routerLink="/hospitals" >General Surgery</a></li>
-<li><a routerLink="/hospitals" >Gynecology</a></li>
-<li><a routerLink="/hospitals" >Hematology</a></li>
-<li><a routerLink="/hospitals" >Oncology and Oncosurgery</a></li>
-<li><a routerLink="/hospitals" >Orthopedics</a></li>
-<li><a routerLink="/hospitals" >Pediatric Cardiology</a></li>
-<li><a routerLink="/hospitals" >Transplant Surgery</a></li>
-<li><a routerLink="/hospitals" >Urology Treatment</a></li> -->
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children page_item_has_children">
-                                            <a routerLink="/treatment">Treatments</a>
-                                            <ul class="sub-menu">
-                                                <li *ngFor="let list of treatetment_list"><a (click)="route_treatment_detail(list)" href="javascript:void(0);"  >{{list.treatment_name}}</a></li>
-<!-- <li><a routerLink="/treatment">Balloon Angioplasty Cost in India</a></li>
-<li><a routerLink="/treatment">Blocked Fallopian Tube Treatment Cost in India</a></li>
-<li><a routerLink="/treatment">Breast Cancer Treatment Cost in India</a></li>
-<li><a routerLink="/treatment">Erectile Dysfunction Treatment Cost in India</a></li>
-<li><a routerLink="/treatment">Hip Replacement Surgery Cost in India</a></li>
-<li><a routerLink="/treatment">Kidney Transplant Cost in India</a></li>
-<li><a routerLink="/treatment">Knee Replacement Surgery Cost in India</a></li>
-<li><a routerLink="/treatment">Mole Removal Cost in India</a></li>
-<li><a routerLink="/treatment">Penile Lengthening Surgery Cost in India</a></li>
-<li><a routerLink="/treatment">Tooth Reshaping and Dental Contouring Cost in India</a></li> -->
-                                            </ul>
-                                        </li>
-
-                                        <li class="">
-                                            <a routerLink="/testimonials">Testimonials</a>
-                                        </li>
-                                        <li class="">
-                                            <a  routerLink="/about-us">About us</a>
-                                        </li>
-                                        <li class="">
-                                            <a routerLink="">Our Blogs</a>
-                                        </li>
-                                        <li class="">
-                                            <a routerLink="/contact-us">Contact us</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
-                            <div class="dc-loginarea">
-
-                                <a href="" data-toggle="modal" data-target="#book-now-form" class="dc-btn">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="cart-profile-container">
+          <div class="cart-container">
+            <a href="">
+              <img
+                src="assets/icons/cart-line.svg"
+                class="navbar-icons"
+                alt=""
+              />Cart</a
+            >
+          </div>
+          <div class="profile-container" style="margin-right: 10px">
+            <span class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="assets/icons/person-circle.svg"
+                  class="navbar-icons"
+                  alt=""
+                />
+                Profile
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </span>
+          </div>
         </div>
-    </header>
-    <!-- Header End -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Health Packages</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Radiology</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Our Labs & Network</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Contact Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">FAQs</a>
+            </li>
+          </ul>
+          <form class="d-flex search-field-container">
+            <span class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Select City
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </span>
+            <input
+              class="form-control search-box"
+              type="search"
+              placeholder="Search for health packages or tests"
+              aria-label="Search"
+            />
 
-<router-outlet></router-outlet>
-
-	<!-- Footer Start -->
-    <footer id="dc-footer" class="dc-footer dc-haslayout">
-        <div class="dc-footertopbar">
-            <div class="container">
-                <div class="row justify-content-center align-self-center">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 push-lg-2">
-                        <div class="dc-footer-call-email">
-                            <div class="dc-callinfoholder">
-                                <figure class="dc-callinfoimg">
-                                    <img src="assets/images/footer/img-01.png" alt="img description">
-                                </figure>
-                                <div class="dc-callinfocontent">
-                                    <h3><span>Emergency Call</span> <a href="javascript:void(0);">+91-9654742998</a></h3>
-                                </div>
-                            </div>
-                            <div class="dc-callinfoholder dc-mailinfoholder">
-                                <figure class="dc-callinfoimg">
-                                    <img src="assets/images/footer/img-02.png" alt="img description">
-                                </figure>
-                                <div class="dc-callinfocontent">
-                                    <h3><span>24/7 Email Support</span> <a href="mailto:Info@domain.com">info@medsurgeindia.com</a></h3>
-                                </div>
-                            </div>
-                            <span class="dc-or-text">- OR -</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <a href="#" class="search-box-a">
+              <img src="assets/icons/search.svg" class="search-box-img" alt=""
+            /></a>
+          </form>
         </div>
-        <div class="dc-fthreecolumns">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 float-left">
-                        <div class="dc-fcol dc-widgetcontactus">
-                            <strong class="dc-logofooter"><a href="index.html"><img src="assets/images/flogo.png" alt="company logo here"></a></strong>
-                            <div class="dc-footercontent">
-                                <div class="dc-description">
-                                    <p>Consectetur adipisicing elit, sed dot eiusd tempor incididunt ailabor dolore magna dolore magnam aliquam quaerat voluptatem <a href="javascript:void(0)" class="dc-detailsinfo dc-detailsinfofooter">...</a></p>
-                                </div>
-                                <ul class="dc-footercontactus">
-                                    <li><address><i class="lnr lnr-location"></i> 123 New Street, Melbourne location  Australia 54214</address></li>
-                                    <li><a href="javascript:void(0)"><i class="lnr lnr-envelope"></i> info@domainurl.com</a></li>
-                                    <li><span><i class="lnr lnr-phone-handset"></i> (0800) 1234 567891</span></li>
-                                </ul>
-                                <div class="dc-fsocialicon">
-                                    <ul class="dc-simplesocialicons">
-                                        <li class="dc-facebook"><a href="javascript:void(0);"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li class="dc-instagram"><a href="javascript:void(0);"><i class="fab fa-instagram"></i></a></li>
-                                        <li class="dc-twitter"><a href="javascript:void(0);"><i class="fab fa-twitter"></i></a></li>
-                                        <li class="dc-linkedin"><a href="javascript:void(0);"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li class="dc-youtube"><a href="javascript:void(0);"><i class="fab fa-youtube"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 float-left">
-                        <div class="dc-fcol dc-flatestad">
-                            <div class="dc-ftitle"><h3>Twitter Live Feed</h3></div>
-                            <div class="dc-footercontent">
-                                <ul class="dc-livefeeddetails">
-                                    <li>
-                                        <figure class="dc-latestadimg">
-                                            <img src="assets/images/footer/img-03.png" alt="img description">
-                                        </figure>
-                                        <div class="dc-latestadcontent">
-                                            <p>Designer Square <em>@Tingdong</em> <span>Consectetur</span> <a href="javascript:void(0);">#adipisicing</a> <span>elitene eiusmod incididunt.</span></p>
-                                            <time datetime="2018-12-12">11:39 AM - June 27, 2018</time>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <figure class="dc-latestadimg">
-                                            <img src="assets/images/footer/img-04.png" alt="img description">
-                                        </figure>
-                                        <div class="dc-latestadcontent">
-                                            <p>Admonster <em>@admonster772</em> <span>Eliten sedat mod</span> <a href="javascript:void(0);">@tempoer</a> <span>incididunt</span> <a href="javascript:void(0);">#utaorne etia</a></p>
-                                            <time datetime="2018-12-12">11:39 AM - June 27, 2018</time>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 float-left">
-                        <div class="dc-fcol dc-newsletterholder">
-                            <div class="dc-ftitle"><h3>Twitter Live Feed</h3></div>
-                            <div class="dc-footercontent dc-newsletterholder">
-                                <div class="dc-description">
-                                    <p>A dipisicing elit sed dotem eiusmou tempor incididunt ut labore.</p>
-                                </div>
-                                <form class="dc-formtheme dc-formnewsletter">
-                                    <fieldset>
-                                        <div class="form-group">
-                                            <input type="email" name="email" value="" class="form-control" placeholder="Enter Your Email" required="">
-                                            <button type="submit"><i class="lnr lnr-arrow-right"></i></button>
-                                        </div>
-                                    </fieldset>
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="call-container">
+          <p>Call us at</p>
+          <p class="number-p">958572828</p>
         </div>
-        <div class="dc-footerbottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-sm-12">
-                            <p class="dc-copyright">Copyrights © 2021 by <span>Medical Tourism.</span> All Rights Reserved.</p>
-                        </div>
-                    </div>
-                </div>
+      </div>
+    </nav>
+    <!-- SMALL NAV  -->
+    <nav class="small-nav-containr-main">
+      <div class="small-nav-container container">
+        <div class="small-nav">
+          <p><a href=""> About </a></p>
+        </div>
+        <div class="small-nav">
+          <p><a href=""> Health Package </a></p>
+        </div>
+        <div class="small-nav">
+          <p><a href=""> Radiology </a></p>
+        </div>
+        <div class="small-nav">
+          <p><a href=""> Our Labs & Networks </a></p>
+        </div>
+        <div class="small-nav">
+          <p><a href="">Blogs </a></p>
+        </div>
+        <div class="small-nav">
+          <p><a href=""> Contact Us </a></p>
+        </div>
+        <div class="small-nav">
+          <p><a href=""> FAQs </a></p>
+        </div>
+      </div>
+    </nav>
+
+    <form class="container d-flex search-field-container-2">
+      <input
+        class="form-control search-box"
+        type="search"
+        placeholder="Search for health packages or tests"
+        aria-label="Search"
+      />
+
+      <a href="#" class="search-box-a">
+        <img src="/icons/search.svg" class="search-box-img" alt=""
+      /></a>
+    </form>
+    <span class="nav-item dropdown dropdown-2">
+      <a
+        class="nav-link container dropdown-toggle"
+        href="#"
+        id="navbarDropdown"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Select City
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><hr class="dropdown-divider" /></li>
+        <li>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </li>
+      </ul>
+    </span>
+
+    <!-- SLIDER SECTION  -->
+    <div class="slider-section-container">
+      <div class="container">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="assets/banners/1.jpg"
+                class="d-block w-100 banner-imgs"
+                alt="banner 1"
+              />
             </div>
-    </footer>
-    <!-- Footer End -->
+            <div class="carousel-item">
+              <img
+                src="assets/banners/2.jpg"
+                class="d-block w-100 banner-imgs"
+                alt="banner 2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="assets/banners/3.jpg"
+                class="d-block w-100 banner-imgs"
+                alt="banner 3"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header End -->
+
+  <router-outlet></router-outlet>
+
+  <!-- Footer Start -->
+  <footer id="dc-footer" class="dc-footer dc-haslayout">
+    <div class="dc-footertopbar">
+      <div class="container">
+        <div class="row justify-content-center align-self-center">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 push-lg-2">
+            <div class="dc-footer-call-email">
+              <div class="dc-callinfoholder">
+                <figure class="dc-callinfoimg">
+                  <img
+                    src="assets/images/footer/img-01.png"
+                    alt="img description"
+                  />
+                </figure>
+                <div class="dc-callinfocontent">
+                  <h3>
+                    <span>Emergency Call</span>
+                    <a href="javascript:void(0);">+91-9654742998</a>
+                  </h3>
+                </div>
+              </div>
+              <div class="dc-callinfoholder dc-mailinfoholder">
+                <figure class="dc-callinfoimg">
+                  <img
+                    src="assets/images/footer/img-02.png"
+                    alt="img description"
+                  />
+                </figure>
+                <div class="dc-callinfocontent">
+                  <h3>
+                    <span>24/7 Email Support</span>
+                    <a href="mailto:Info@domain.com">info@medsurgeindia.com</a>
+                  </h3>
+                </div>
+              </div>
+              <span class="dc-or-text">- OR -</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dc-fthreecolumns">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 float-left">
+            <div class="dc-fcol dc-widgetcontactus">
+              <strong class="dc-logofooter"
+                ><a href="index.html"
+                  ><img
+                    src="assets/logo/new_logo.png"
+                    alt="company logo here" /></a
+              ></strong>
+              <div class="dc-footercontent">
+                <div class="dc-description">
+                  <p>
+                    Consectetur adipisicing elit, sed dot eiusd tempor
+                    incididunt ailabor dolore magna dolore magnam aliquam
+                    quaerat voluptatem
+                    <a
+                      href="javascript:void(0)"
+                      class="dc-detailsinfo dc-detailsinfofooter"
+                      >...</a
+                    >
+                  </p>
+                </div>
+                <ul class="dc-footercontactus">
+                  <li>
+                    <address>
+                      <i class="lnr lnr-location"></i> 123 New Street, Melbourne
+                      location Australia 54214
+                    </address>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)"
+                      ><i class="lnr lnr-envelope"></i> info@domainurl.com</a
+                    >
+                  </li>
+                  <li>
+                    <span
+                      ><i class="lnr lnr-phone-handset"></i> (0800) 1234
+                      567891</span
+                    >
+                  </li>
+                </ul>
+                <div class="dc-fsocialicon">
+                  <ul class="dc-simplesocialicons">
+                    <li class="dc-facebook">
+                      <a href="javascript:void(0);"
+                        ><i class="fab fa-facebook-f"></i
+                      ></a>
+                    </li>
+                    <li class="dc-instagram">
+                      <a href="javascript:void(0);"
+                        ><i class="fab fa-instagram"></i
+                      ></a>
+                    </li>
+                    <li class="dc-twitter">
+                      <a href="javascript:void(0);"
+                        ><i class="fab fa-twitter"></i
+                      ></a>
+                    </li>
+                    <li class="dc-linkedin">
+                      <a href="javascript:void(0);"
+                        ><i class="fab fa-linkedin-in"></i
+                      ></a>
+                    </li>
+                    <li class="dc-youtube">
+                      <a href="javascript:void(0);"
+                        ><i class="fab fa-youtube"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 float-left">
+            <div class="dc-fcol dc-flatestad">
+              <div class="dc-ftitle"><h3>Twitter Live Feed</h3></div>
+              <div class="dc-footercontent">
+                <ul class="dc-livefeeddetails">
+                  <li>
+                    <figure class="dc-latestadimg">
+                      <img
+                        src="assets/images/footer/img-03.png"
+                        alt="img description"
+                      />
+                    </figure>
+                    <div class="dc-latestadcontent">
+                      <p>
+                        Designer Square <em>@Tingdong</em>
+                        <span>Consectetur</span>
+                        <a href="javascript:void(0);">#adipisicing</a>
+                        <span>elitene eiusmod incididunt.</span>
+                      </p>
+                      <time datetime="2018-12-12"
+                        >11:39 AM - June 27, 2018</time
+                      >
+                    </div>
+                  </li>
+                  <li>
+                    <figure class="dc-latestadimg">
+                      <img
+                        src="assets/images/footer/img-04.png"
+                        alt="img description"
+                      />
+                    </figure>
+                    <div class="dc-latestadcontent">
+                      <p>
+                        Admonster <em>@admonster772</em>
+                        <span>Eliten sedat mod</span>
+                        <a href="javascript:void(0);">@tempoer</a>
+                        <span>incididunt</span>
+                        <a href="javascript:void(0);">#utaorne etia</a>
+                      </p>
+                      <time datetime="2018-12-12"
+                        >11:39 AM - June 27, 2018</time
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 float-left">
+            <div class="dc-fcol dc-newsletterholder">
+              <div class="dc-ftitle"><h3>Twitter Live Feed</h3></div>
+              <div class="dc-footercontent dc-newsletterholder">
+                <div class="dc-description">
+                  <p>
+                    A dipisicing elit sed dotem eiusmou tempor incididunt ut
+                    labore.
+                  </p>
+                </div>
+                <form class="dc-formtheme dc-formnewsletter">
+                  <fieldset>
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        name="email"
+                        value=""
+                        class="form-control"
+                        placeholder="Enter Your Email"
+                        required=""
+                      />
+                      <button type="submit">
+                        <i class="lnr lnr-arrow-right"></i>
+                      </button>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dc-footerbottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-12">
+            <p class="dc-copyright">
+              Copyrights © 2021 by <span>Medical Tourism.</span> All Rights
+              Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
 </div>
 
+<div
+  class="modal fade"
+  id="book-now-form"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">
+          Get a Free Quote & Special Offers
+        </h5>
 
-<div class="modal fade" id="book-now-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered" role="document">
-<div class="modal-content">
-  <div class="modal-header">
-    <h5 class="modal-title" id="exampleModalLongTitle">Get a Free Quote & Special Offers</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Fill the form below for Instant Connect with our Healthcare
+          Consultants!!
+        </p>
+        <form action="#" method="post">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group first">
+                <label for="fname">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="e.g. John"
+                  id="fname"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group first">
+                <label for="lname">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="e.g. Smith"
+                  id="lname"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group first">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="e.g. john@your-domain.com"
+                  id="email"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group first">
+                <label for="lname">Country</label>
+                <select class="form-control">
+                  <option>India</option>
+                  <option>Srilanka</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group first">
+                <label for="lname">Phone Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="+00 0000 000 0000"
+                  id="lname"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group last mb-3">
+                <label for="password">Message</label>
+                <textarea class="form-control" placeholder="Your Message">
+                </textarea>
+              </div>
+            </div>
+          </div>
 
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+          <input type="submit" value="Book Now" class="btn px-5 btn-primary" />
+        </form>
+      </div>
+    </div>
   </div>
-  <div class="modal-body">
-  <p>Fill the form below for Instant Connect with our Healthcare Consultants!!</p>
-    <form action="#" method="post">
-<div class="row">
-<div class="col-md-6">
-<div class="form-group first">
-<label for="fname">First Name</label>
-<input type="text" class="form-control" placeholder="e.g. John" id="fname">
-</div>
-</div>
-<div class="col-md-6">
-<div class="form-group first">
-<label for="lname">Last Name</label>
-<input type="text" class="form-control" placeholder="e.g. Smith" id="lname">
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-12">
-<div class="form-group first">
-<label for="email">Email Address</label>
-<input type="email" class="form-control" placeholder="e.g. john@your-domain.com" id="email">
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-6">
-<div class="form-group first">
-<label for="lname">Country</label>
-<select class="form-control">
-<option>India</option>
-<option>Srilanka</option>
-
-</select>
-
-</div>
-</div>
-<div class="col-md-6">
-<div class="form-group first">
-<label for="lname">Phone Number</label>
-<input type="text" class="form-control" placeholder="+00 0000 000 0000" id="lname">
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-12">
-<div class="form-group last mb-3">
-<label for="password">Message</label>
-<textarea class="form-control" placeholder="Your Message">
-
-</textarea>
-</div>
-</div>
-
-</div>
-
-<input type="submit" value="Book Now" class="btn px-5 btn-primary">
-</form>
-  </div>
-
-</div>
-</div>
 </div>

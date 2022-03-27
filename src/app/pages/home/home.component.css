@@ -1,6 +1,7 @@
 .dc-btn {
   text-decoration: none;
 }
+
 .dc-docpostcontent .dc-title h3 a {
   float: left;
   width: 175px;
@@ -10,6 +11,8 @@
   text-overflow: ellipsis;
   color: var(--terthemecolor);
 }
+
 .owl-stage-outer {
   padding: 67px 0 24px 30px;
 }
+/*# sourceMappingURL=home.component.css.map */
