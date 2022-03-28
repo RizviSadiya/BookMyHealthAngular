@@ -1,0 +1,30 @@
+.dc-navdocsingletab {
+  width: 100%;
+  float: left;
+  display: block;
+  line-height: 38px;
+  list-style-type: none;
+  .nav-item {
+    a {
+      text-decoration: none;
+    }
+  }
+}
+a {
+  text-decoration: none;
+}
+.dc-tags ul li a {
+  float: left;
+  color: #767676;
+  font-size: 12px;
+  padding: 0 14px;
+  line-height: 24px;
+  border-radius: 4px;
+  background: #f7f7f7;
+}
+.tab-pane ul li:before {
+  content: "";
+  font-family: "themify";
+  margin-right: 15px;
+  font-size: 90%;
+}
