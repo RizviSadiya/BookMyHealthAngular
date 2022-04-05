@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './auth/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DemopageComponent } from './pages/demopage/demopage.component';
 import { NewdemoComponent } from './pages/newdemo/newdemo.component';
@@ -19,11 +18,11 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { HttpClientModule } from '@angular/common/http';
 //import {NgxPaginationModule} from 'ngx-pagination';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-
+import { AuthenticationModule } from './authentication/authentication.module';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
+
     DashboardComponent,
     DemopageComponent,
     NewdemoComponent,
@@ -38,7 +37,12 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     AboutUsComponent,
     ContactUsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    AuthenticationModule,
+  ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
 })

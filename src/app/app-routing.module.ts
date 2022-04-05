@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './auth/login/login.component';
+import { LoginComponent } from './authentication/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DemopageComponent } from './pages/demopage/demopage.component';
 import { NewdemoComponent } from './pages/newdemo/newdemo.component';
@@ -14,8 +14,7 @@ import { TreatmentDetailComponent } from './pages/treatment-detail/treatment-det
 import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
-
-
+import { PatientRegistrationComponent } from './authentication/patient-registration/patient-registration.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -28,15 +27,15 @@ const routes: Routes = [
   { path: 'hospitals', component: HospitalsComponent },
   { path: 'hospital-detail', component: HospitalDetailComponent },
   { path: 'treatment', component: TreatmentComponent },
-  { path: 'treatment-detail', component: TreatmentDetailComponent }, 
+  { path: 'treatment-detail', component: TreatmentDetailComponent },
   { path: 'testimonials', component: TestimonialsComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'contact-us', component: ContactUsComponent },
-  
+  { path: 'patient-registration', component: PatientRegistrationComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
