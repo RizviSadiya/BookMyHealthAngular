@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 //import {NgxPaginationModule} from 'ngx-pagination';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { AuthenticationModule } from './authentication/authentication.module';
+import { DashboardsModule } from './dashboards/dashboards.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +43,7 @@ import { AuthenticationModule } from './authentication/authentication.module';
     AppRoutingModule,
     HttpClientModule,
     AuthenticationModule,
+    DashboardsModule,
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
