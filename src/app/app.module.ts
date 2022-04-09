@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DemopageComponent } from './pages/demopage/demopage.component';
 import { NewdemoComponent } from './pages/newdemo/newdemo.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -19,12 +18,11 @@ import { HttpClientModule } from '@angular/common/http';
 //import {NgxPaginationModule} from 'ngx-pagination';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { AuthenticationModule } from './authentication/authentication.module';
-import { DashboardsModule } from './dashboards/dashboards.module';
+import { DoctorDashboardModule } from './doctor-dashboard/doctor-dashboard.module';
 @NgModule({
   declarations: [
     AppComponent,
 
-    DashboardComponent,
     DemopageComponent,
     NewdemoComponent,
     HomeComponent,
@@ -43,7 +41,7 @@ import { DashboardsModule } from './dashboards/dashboards.module';
     AppRoutingModule,
     HttpClientModule,
     AuthenticationModule,
-    DashboardsModule,
+    DoctorDashboardModule,
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],

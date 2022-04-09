@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './authentication/login/login.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DemopageComponent } from './pages/demopage/demopage.component';
 import { NewdemoComponent } from './pages/newdemo/newdemo.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -15,10 +14,15 @@ import { TestimonialsComponent } from './pages/testimonials/testimonials.compone
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { PatientRegistrationComponent } from './authentication/patient-registration/patient-registration.component';
+import { HospitalSettingComponent } from './doctor-dashboard/hospital-setting/hospital-setting.component';
+import { ClinicSettingComponent } from './doctor-dashboard/clinic-setting/clinic-setting.component';
+import { PayoutSettingComponent } from './doctor-dashboard/payout-setting/payout-setting.component';
+import { DoctorHomeComponent } from './doctor-dashboard/doctor-home/doctor-home.component';
+import { InvoiceComponent } from './doctor-dashboard/invoice/invoice.component';
+import { AppointmentListComponent } from './doctor-dashboard/appointment-list/appointment-list.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent },
   { path: 'demopage', component: DemopageComponent },
   { path: 'newdemo', component: NewdemoComponent },
   { path: '', component: HomeComponent },
@@ -32,6 +36,14 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent },
   { path: 'contact-us', component: ContactUsComponent },
   { path: 'patient-registration', component: PatientRegistrationComponent },
+  { path: 'clinic-setting', component: ClinicSettingComponent },
+  { path: 'hospital-setting', component: HospitalSettingComponent },
+  { path: 'doctor-home', component: DoctorHomeComponent },
+  { path: 'hospital-setting', component: HospitalSettingComponent },
+  { path: 'invoice', component: InvoiceComponent },
+  { path: 'payout-settings', component: PayoutSettingComponent },
+  { path: 'profile-settings', component: HospitalSettingComponent },
+  { path: 'appointment-list', component: AppointmentListComponent },
 ];
 
 @NgModule({
