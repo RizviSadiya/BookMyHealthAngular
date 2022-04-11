@@ -18,11 +18,17 @@ import { HttpClientModule } from '@angular/common/http';
 //import {NgxPaginationModule} from 'ngx-pagination';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { AuthenticationModule } from './authentication/authentication.module';
-import { DoctorDashboardModule } from './doctor-dashboard/doctor-dashboard.module';
+import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
+import { AppointmentListComponent } from './doctor-dashboard/appointment-list/appointment-list.component';
+import { ClinicSettingComponent } from './doctor-dashboard/clinic-setting/clinic-setting.component';
+import { HospitalSettingComponent } from './doctor-dashboard/hospital-setting/hospital-setting.component';
+import { InvoiceComponent } from './doctor-dashboard/invoice/invoice.component';
+import { PayoutSettingComponent } from './doctor-dashboard/payout-setting/payout-setting.component';
+import { ProfileSettingComponent } from './doctor-dashboard/profile-setting/profile-setting.component';
+import { ServiceComponent } from './doctor-dashboard/service/service.component';
 @NgModule({
   declarations: [
     AppComponent,
-
     DemopageComponent,
     NewdemoComponent,
     HomeComponent,
@@ -35,13 +41,20 @@ import { DoctorDashboardModule } from './doctor-dashboard/doctor-dashboard.modul
     TestimonialsComponent,
     AboutUsComponent,
     ContactUsComponent,
+    DoctorDashboardComponent,
+    AppointmentListComponent,
+    ClinicSettingComponent,
+    HospitalSettingComponent,
+    InvoiceComponent,
+    PayoutSettingComponent,
+    ProfileSettingComponent,
+    ServiceComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     AuthenticationModule,
-    DoctorDashboardModule,
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
