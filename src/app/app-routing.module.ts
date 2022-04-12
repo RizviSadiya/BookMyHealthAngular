@@ -22,6 +22,7 @@ import { InvoiceComponent } from './doctor-dashboard/invoice/invoice.component';
 import { PayoutSettingComponent } from './doctor-dashboard/payout-setting/payout-setting.component';
 import { ProfileSettingComponent } from './doctor-dashboard/profile-setting/profile-setting.component';
 import { ServiceComponent } from './doctor-dashboard/service/service.component';
+import { DoctorDashboardHomeComponent } from './doctor-dashboard/doctor-dashboard-home/doctor-dashboard-home.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -42,6 +43,15 @@ const routes: Routes = [
     path: 'doctor-dashboard',
     component: DoctorDashboardComponent,
     children: [
+      {
+        redirectTo: 'doctor-dashboard-home',
+        path: '',
+        pathMatch: 'full',
+      },
+      {
+        path: 'doctor-dashboard-home',
+        component: DoctorDashboardHomeComponent,
+      },
       {
         path: 'service',
         component: ServiceComponent,

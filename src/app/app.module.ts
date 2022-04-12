@@ -26,6 +26,7 @@ import { InvoiceComponent } from './doctor-dashboard/invoice/invoice.component';
 import { PayoutSettingComponent } from './doctor-dashboard/payout-setting/payout-setting.component';
 import { ProfileSettingComponent } from './doctor-dashboard/profile-setting/profile-setting.component';
 import { ServiceComponent } from './doctor-dashboard/service/service.component';
+import { DoctorDashboardHomeComponent } from './doctor-dashboard/doctor-dashboard-home/doctor-dashboard-home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +50,7 @@ import { ServiceComponent } from './doctor-dashboard/service/service.component';
     PayoutSettingComponent,
     ProfileSettingComponent,
     ServiceComponent,
+    DoctorDashboardHomeComponent,
   ],
   imports: [
     BrowserModule,
