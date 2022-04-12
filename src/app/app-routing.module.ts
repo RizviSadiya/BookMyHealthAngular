@@ -23,6 +23,7 @@ import { PayoutSettingComponent } from './doctor-dashboard/payout-setting/payout
 import { ProfileSettingComponent } from './doctor-dashboard/profile-setting/profile-setting.component';
 import { ServiceComponent } from './doctor-dashboard/service/service.component';
 import { DoctorDashboardHomeComponent } from './doctor-dashboard/doctor-dashboard-home/doctor-dashboard-home.component';
+import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -65,6 +66,7 @@ const routes: Routes = [
       { path: 'service', component: ServiceComponent },
     ],
   },
+  { path: 'patient-dashboard', component: PatientDashboardComponent },
 ];
 
 @NgModule({

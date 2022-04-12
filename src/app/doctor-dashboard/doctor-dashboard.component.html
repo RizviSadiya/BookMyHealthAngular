@@ -138,35 +138,26 @@
       <div class="container-fluid">
         <div class="mb-npx">
           <div class="row align-items-center">
-            <ul class="navbar-nav mr-lg-2">
-              <li class="nav-item nav-search d-none d-lg-block">
-                <div class="input-group">
-                  <div
-                    class="input-group-prepend hover-cursor"
-                    id="navbar-search-icon"
-                  >
-                    <span class="input-group-text" id="search">
-                      <a href=""><i class="bi bi-search"></i></a>
-                    </span>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="navbar-search-input"
-                    placeholder="Search now"
-                    aria-label="search"
-                    aria-describedby="search"
-                  />
-                </div>
-              </li>
-            </ul>
+            <!-- User menu (mobile) -->
+            <div class="navbar-user">
+              <!-- Dropdown -->
+              <div class="dropdown">
+                <!-- Toggle -->
+
+                <img
+                  alt="Image Placeholder"
+                  src="https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
+                  class="avatar avatar- rounded-circle"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
 
     <!-- Main -->
-    <main class="bg-surface-secondary pb-32">
+    <main class="bg-surface-secondary pb-32 py-10">
       <div class="container-fluid">
         <router-outlet></router-outlet>
       </div>

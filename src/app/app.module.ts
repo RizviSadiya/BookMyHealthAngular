@@ -27,6 +27,11 @@ import { PayoutSettingComponent } from './doctor-dashboard/payout-setting/payout
 import { ProfileSettingComponent } from './doctor-dashboard/profile-setting/profile-setting.component';
 import { ServiceComponent } from './doctor-dashboard/service/service.component';
 import { DoctorDashboardHomeComponent } from './doctor-dashboard/doctor-dashboard-home/doctor-dashboard-home.component';
+import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
+import { PatientDashboardHomeComponent } from './patient-dashboard/patient-dashboard-home/patient-dashboard-home.component';
+import { YourAppointmentComponent } from './patient-dashboard/your-appointment/your-appointment.component';
+import { PatientInvoiceComponent } from './patient-dashboard/patient-invoice/patient-invoice.component';
+import { PatientPayoutSettingsComponent } from './patient-dashboard/patient-payout-settings/patient-payout-settings.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +56,11 @@ import { DoctorDashboardHomeComponent } from './doctor-dashboard/doctor-dashboar
     ProfileSettingComponent,
     ServiceComponent,
     DoctorDashboardHomeComponent,
+    PatientDashboardComponent,
+    PatientDashboardHomeComponent,
+    YourAppointmentComponent,
+    PatientInvoiceComponent,
+    PatientPayoutSettingsComponent,
   ],
   imports: [
     BrowserModule,
