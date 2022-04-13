@@ -31,7 +31,10 @@ import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard
 import { PatientDashboardHomeComponent } from './patient-dashboard/patient-dashboard-home/patient-dashboard-home.component';
 import { YourAppointmentComponent } from './patient-dashboard/your-appointment/your-appointment.component';
 import { PatientInvoiceComponent } from './patient-dashboard/patient-invoice/patient-invoice.component';
-import { PatientPayoutSettingsComponent } from './patient-dashboard/patient-payout-settings/patient-payout-settings.component';
+import { PatientMedicinesComponent } from './patient-dashboard/patient-medicines/patient-medicines.component';
+import { PatientProfileSettingsComponent } from './patient-dashboard/patient-profile-settings/patient-profile-settings.component';
+import { RouterModule } from '@angular/router';
+import { AppointmentViewDetailsComponent } from './patient-dashboard/patient-dashboard-home/appointment-view-details/appointment-view-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,13 +63,16 @@ import { PatientPayoutSettingsComponent } from './patient-dashboard/patient-payo
     PatientDashboardHomeComponent,
     YourAppointmentComponent,
     PatientInvoiceComponent,
-    PatientPayoutSettingsComponent,
+    PatientMedicinesComponent,
+    PatientProfileSettingsComponent,
+    AppointmentViewDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     AuthenticationModule,
+    RouterModule,
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],

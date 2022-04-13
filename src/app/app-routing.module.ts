@@ -24,6 +24,12 @@ import { ProfileSettingComponent } from './doctor-dashboard/profile-setting/prof
 import { ServiceComponent } from './doctor-dashboard/service/service.component';
 import { DoctorDashboardHomeComponent } from './doctor-dashboard/doctor-dashboard-home/doctor-dashboard-home.component';
 import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
+import { PatientDashboardHomeComponent } from './patient-dashboard/patient-dashboard-home/patient-dashboard-home.component';
+import { YourAppointmentComponent } from './patient-dashboard/your-appointment/your-appointment.component';
+import { PatientInvoiceComponent } from './patient-dashboard/patient-invoice/patient-invoice.component';
+import { PatientProfileSettingsComponent } from './patient-dashboard/patient-profile-settings/patient-profile-settings.component';
+import { PatientMedicinesComponent } from './patient-dashboard/patient-medicines/patient-medicines.component';
+import { AppointmentViewDetailsComponent } from './patient-dashboard/patient-dashboard-home/appointment-view-details/appointment-view-details.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -66,7 +72,40 @@ const routes: Routes = [
       { path: 'service', component: ServiceComponent },
     ],
   },
-  { path: 'patient-dashboard', component: PatientDashboardComponent },
+  {
+    path: 'patient-dashboard',
+    component: PatientDashboardComponent,
+    children: [
+      {
+        redirectTo: 'patient-dashboard-home',
+        path: '',
+        pathMatch: 'full',
+      },
+      {
+        path: 'patient-dashboard-home',
+        component: PatientDashboardHomeComponent,
+        children: [
+          {
+            path: 'appointment-view-details',
+            component: AppointmentViewDetailsComponent,
+          },
+        ],
+      },
+      {
+        path: 'your-appointment',
+        component: YourAppointmentComponent,
+      },
+      { path: 'invoice', component: PatientInvoiceComponent },
+      {
+        path: 'patient-profile-setting',
+        component: PatientProfileSettingsComponent,
+      },
+      {
+        path: 'patient-medicine',
+        component: PatientMedicinesComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({
