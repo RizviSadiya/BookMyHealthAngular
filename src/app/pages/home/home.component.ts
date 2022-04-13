@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
     this.api.postHeader(body.toString()).subscribe(res=>{
       if(res){
         console.log("res",res);
-        
+        this.api.setLogindata(res.access_token)
       }
     })
   }
