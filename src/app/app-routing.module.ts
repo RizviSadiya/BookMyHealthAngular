@@ -30,6 +30,12 @@ import { PatientInvoiceComponent } from './patient-dashboard/patient-invoice/pat
 import { PatientProfileSettingsComponent } from './patient-dashboard/patient-profile-settings/patient-profile-settings.component';
 import { PatientMedicinesComponent } from './patient-dashboard/patient-medicines/patient-medicines.component';
 import { AppointmentViewDetailsComponent } from './patient-dashboard/patient-dashboard-home/appointment-view-details/appointment-view-details.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AdminDashboardHomeComponent } from './admin-dashboard/admin-dashboard-home/admin-dashboard-home.component';
+import { MedicinesComponent } from './admin-dashboard/medicines/medicines.component';
+import { TransactionComponent } from './admin-dashboard/transaction/transaction.component';
+import { UserPurchasingDetailsComponent } from './admin-dashboard/user-purchasing-details/user-purchasing-details.component';
+import { AdminTransactionDetailsComponent } from './admin-dashboard/admin-dashboard-home/admin-transaction-details/admin-transaction-details.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -103,6 +109,36 @@ const routes: Routes = [
       {
         path: 'patient-medicine',
         component: PatientMedicinesComponent,
+      },
+    ],
+  },
+  {
+    path: 'admin-dashboard',
+    component: AdminDashboardComponent,
+    children: [
+      {
+        redirectTo: 'admin-dashboard-home',
+        path: '',
+        pathMatch: 'full',
+      },
+      {
+        path: 'admin-dashboard-home',
+        component: AdminDashboardHomeComponent,
+        children: [
+          {
+            path: 'admin-transaction-details',
+            component: AdminTransactionDetailsComponent,
+          },
+        ],
+      },
+      {
+        path: 'medicines',
+        component: MedicinesComponent,
+      },
+      { path: 'transaction', component: TransactionComponent },
+      {
+        path: 'user-purchasing-details',
+        component: UserPurchasingDetailsComponent,
       },
     ],
   },

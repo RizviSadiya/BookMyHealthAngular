@@ -35,6 +35,12 @@ import { PatientMedicinesComponent } from './patient-dashboard/patient-medicines
 import { PatientProfileSettingsComponent } from './patient-dashboard/patient-profile-settings/patient-profile-settings.component';
 import { RouterModule } from '@angular/router';
 import { AppointmentViewDetailsComponent } from './patient-dashboard/patient-dashboard-home/appointment-view-details/appointment-view-details.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { MedicinesComponent } from './admin-dashboard/medicines/medicines.component';
+import { UserPurchasingDetailsComponent } from './admin-dashboard/user-purchasing-details/user-purchasing-details.component';
+import { TransactionComponent } from './admin-dashboard/transaction/transaction.component';
+import { AdminDashboardHomeComponent } from './admin-dashboard/admin-dashboard-home/admin-dashboard-home.component';
+import { AdminTransactionDetailsComponent } from './admin-dashboard/admin-dashboard-home/admin-transaction-details/admin-transaction-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +72,12 @@ import { AppointmentViewDetailsComponent } from './patient-dashboard/patient-das
     PatientMedicinesComponent,
     PatientProfileSettingsComponent,
     AppointmentViewDetailsComponent,
+    AdminDashboardComponent,
+    MedicinesComponent,
+    UserPurchasingDetailsComponent,
+    TransactionComponent,
+    AdminDashboardHomeComponent,
+    AdminTransactionDetailsComponent,
   ],
   imports: [
     BrowserModule,
