@@ -14,6 +14,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   rootUrl;
+  baseUrl;
   doctor_array: any = [];
   hospital_array: any = [];
   treatment_detail_obj: any = {};
@@ -23,6 +24,8 @@ export class ApiService {
   constructor(private http: HttpClient) {
     this.rootUrl =
       'https://auth.whitecoats.com/auth/realms/whitecoats/protocol/openid-connect/token';
+    this.baseUrl =
+      'https://auth.whitecoats.com/';
   }
 
   changeapi(x) {
@@ -45,7 +48,17 @@ export class ApiService {
   headersDef() {
     let header = new HttpHeaders({
       'Content-Type': "application/x-www-form-urlencoded",
-      // "Authorization": "Bearer " + this.getLogindata(),
+      "Authorization": "Bearer " + this.getLogindata(),
+      // x-interface-id: 2835
+    });
+    // To be edited
+    const requestOptions = { headers: header }
+    return requestOptions;
+  }
+  headers() {
+    let header = new HttpHeaders({
+      'Content-Type': "application/json",
+      "Authorization": "Bearer " + this.getLogindata(),
       // x-interface-id: 2835
     });
     // To be edited
@@ -57,10 +70,17 @@ export class ApiService {
     return this.http.post(this.rootUrl , object, this.headersDef())
   }
 
+ patientRegistration(object): any {
+    return this.http.post(this.baseUrl+'v1/user/register', object, this.headers())
+  }
+
   getHeader(x): any {
     return this.http.get(this.rootUrl + x, this.headersDef())
   }
 
+  DoctorSearch(object): any {
+    return this.http.post(this.baseUrl+'v1/search', object, this.headers())
+  }
 
   // ObtendoToken(): Observable<string> {
   //   const headers = new Headers();
